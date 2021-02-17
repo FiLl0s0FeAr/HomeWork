@@ -27,7 +27,7 @@ public class ZKillboardPage {
     public ZKillboardPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        this.wait = new WebDriverWait(this.driver, 3);
+        this.wait = new WebDriverWait(this.driver, 10);
     }
 
     public String getName(){

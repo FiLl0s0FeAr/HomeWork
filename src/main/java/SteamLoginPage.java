@@ -15,34 +15,28 @@ public class SteamLoginPage {
     @FindBy(id = "input_password")
     WebElement password;
 
-    @FindBy(xpath = "//div[3]/div/input")
-    WebElement remember;
-
     @FindBy(xpath = "//*[contains(text(), 'Forgot your password?')")
     WebElement forgot;
 
-    @FindBy(xpath = "//*[text()='Sing In']")
+    @FindBy(xpath = "//*[@id=\"login_btn_signin\"]/button")
     WebElement singIn;
 
     public SteamLoginPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, 3);
+        this.wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(driver, this);
     }
 
     public void setLogin(String strLogin){
-        wait.until(ExpectedConditions.elementToBeClickable(login));
+        wait.until(ExpectedConditions.visibilityOfAllElements(login));
         login.sendKeys(strLogin);
     }
 
     public void setPassword(String strPassword){
-        wait.until(ExpectedConditions.elementToBeSelected(password));
+        wait.until(ExpectedConditions.visibilityOfAllElements(password));
         password.sendKeys(strPassword);
     }
 
-    public void clickRemember(){
-        remember.click();
-    }
     public void clickSingIn(){
         singIn.click();
     }

@@ -26,17 +26,17 @@ public class LittleNightmaresTwoPage {
 
     public LittleNightmaresTwoPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, 3);
+        this.wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(driver, this);
     }
 
     public String getNameAchievments() throws InterruptedException {
-        wait.wait(3000);
+        //wait.wait(10000);
         return firstAchievements.getText();
     }
 
     public void clickLogin(){
-        //wait.until(ExpectedConditions.elementToBeClickable(login));
+        wait.until(ExpectedConditions.visibilityOfAllElements(login));
         login.click();
     }
 

@@ -1,4 +1,3 @@
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,6 +8,7 @@ public class Main {
         WebDriver driver = new ChromeDriver();
         driver.get("https://steamcommunity.com/sharedfiles/filedetails/?id=1446022987");
 
+        driver.manage().window().maximize();
         LittleNightmaresTwoPage lntp = new LittleNightmaresTwoPage(driver);
         System.out.println(lntp.image.getTagName());
         System.out.println(lntp.image2.getTagName());
@@ -17,12 +17,9 @@ public class Main {
         lntp.clickLogin();
 
         SteamLoginPage slp = new SteamLoginPage(driver);
-        System.out.println(slp.forgot.getText());
         slp.setLogin("FiLL");
         slp.setPassword("FiLL");
-        slp.clickRemember();
         slp.clickSingIn();
-        driver.quit();
 
         driver.get("https://zkillboard.com/character/2114938111/");
         ZKillboardPage zlb = new ZKillboardPage(driver);
@@ -30,7 +27,6 @@ public class Main {
         System.out.println(zlb.getTime());
         System.out.println(zlb.getISKEarned());
         System.out.println(zlb.getISKLost());
-        driver.quit();
 
         driver.get("https://www.craftofexile.com/");
         CraftOfExilePage coep = new CraftOfExilePage(driver);

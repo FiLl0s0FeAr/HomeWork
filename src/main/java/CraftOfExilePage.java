@@ -19,7 +19,7 @@ public class CraftOfExilePage {
     @FindBy(xpath = "//*[@id=\"poecInfluenceSelector\"]/div[2]/div")
     WebElement influence;
 
-    @FindBy(xpath = "(//*[contains(text(), 'Crusader']")
+    @FindBy(xpath = "//*[@id=\"poecInfluenceSelector\"]/div[3]/div[2]")
     WebElement influenceCrusader;
 
     @FindBy(xpath = "//*[text()='Enemies you Kill Explode, dealing 3% of their Life as Physical Damage']")
@@ -27,7 +27,7 @@ public class CraftOfExilePage {
 
     public CraftOfExilePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, 3);
+        this.wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(driver, this);
     }
 
