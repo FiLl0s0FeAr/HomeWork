@@ -21,7 +21,7 @@ public class LittleNightmaresTwoPage {
     @FindBy(xpath = "//img")
     WebElement image;
 
-    @FindBy(xpath = "a[text()='login']")
+    @FindBy(xpath = "//*[text()='login']")
     WebElement login;
 
     public LittleNightmaresTwoPage(WebDriver driver) {
@@ -36,7 +36,7 @@ public class LittleNightmaresTwoPage {
     }
 
     public void clickLogin(){
-        wait.until(ExpectedConditions.elementToBeClickable(login));
+        //wait.until(ExpectedConditions.elementToBeClickable(login));
         login.click();
     }
 

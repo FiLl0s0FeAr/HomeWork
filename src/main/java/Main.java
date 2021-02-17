@@ -15,9 +15,7 @@ public class Main {
         System.out.println(lntp.getNameAchievments());
         System.out.println(lntp.webAward.getText());
         lntp.clickLogin();
-        driver.quit();
 
-        driver.get("https://steamcommunity.com/login/home/?goto="); //испарвить (переход при нажатии логин на странице холлов)
         SteamLoginPage slp = new SteamLoginPage(driver);
         System.out.println(slp.forgot.getText());
         slp.setLogin("FiLL");
