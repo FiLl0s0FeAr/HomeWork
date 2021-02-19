@@ -31,7 +31,6 @@ public class LittleNightmaresTwoPage {
     }
 
     public String getNameAchievments() throws InterruptedException {
-        //wait.wait(10000);
         return firstAchievements.getText();
     }
 
