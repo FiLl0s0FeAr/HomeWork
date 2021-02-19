@@ -10,7 +10,7 @@ public class Main {
 
         driver.manage().window().maximize();
 
-        /*LittleNightmaresTwoPage lntp = new LittleNightmaresTwoPage(driver);
+        LittleNightmaresTwoPage lntp = new LittleNightmaresTwoPage(driver);
         System.out.println(lntp.image.getTagName());
         System.out.println(lntp.image2.getTagName());
         System.out.println(lntp.getNameAchievments());
@@ -20,7 +20,7 @@ public class Main {
         SteamLoginPage slp = new SteamLoginPage(driver);
         slp.setLogin("FiLL");
         slp.setPassword("FiLL");
-        slp.clickSingIn();*/
+        slp.clickSingIn();
 
         driver.get("https://zkillboard.com/character/2114938111/");
         ZKillboardPage zlb = new ZKillboardPage(driver);
@@ -29,13 +29,13 @@ public class Main {
         System.out.println(zlb.getISKEarned());
         System.out.println(zlb.getISKLost());
 
-       /* driver.get("https://www.craftofexile.com/");
+        driver.get("https://www.craftofexile.com/");
         CraftOfExilePage coep = new CraftOfExilePage(driver);
         coep.clickBodyArmors();
         coep.clickBodyArmorSTR();
         coep.clickInfluence();
         coep.clickInfluenceCrusader();
-        coep.clickModKillExplode();*/
+        coep.clickModKillExplode();
 
     }
 }
