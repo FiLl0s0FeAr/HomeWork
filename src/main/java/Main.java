@@ -1,3 +1,7 @@
+import Page.CraftOfExilePage;
+import Page.LittleNightmaresTwoPage;
+import Page.SteamLoginPage;
+import Page.ZKillboardPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
