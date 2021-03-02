@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name = "All test">
+    <test name = "TestNGCraftOfExile">
+        <classes>
+            <class name = "TestNGCraftOfExile">
+                <methods>
+                    <include name ="verifyHomePageTitle"/>
+                    <include name ="verifyLanguages"/>
+                </methods>
+            </class>
+            <class name="TestNGZKillBoard">
+                <methods>
+                    <include name="verifyCharacterName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
