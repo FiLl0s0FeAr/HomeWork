@@ -10,7 +10,7 @@ public class TestNGCraftOfExile {
     public String baseURLCraftOfExile = "https://www.craftofexile.com/";
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeMethod(description = "Configure something before test")
     public void setBaseURLCraftOfExile(){
         System.setProperty("webdriver.chrome.driver","C:\\Users\\admin\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
