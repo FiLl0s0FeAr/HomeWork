@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import static io.qameta.allure.Allure.step;
 
 public class TestNGCraftOfExile {
     public String baseURLCraftOfExile = "https://www.craftofexile.com/";
@@ -18,6 +19,7 @@ public class TestNGCraftOfExile {
 
     @Test(description = "Verify page title")
     public void verifyHomePageTitle(){
+        step("Simple step");
         String expectedTitle = "Craft of Exile";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
