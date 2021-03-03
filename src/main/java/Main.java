@@ -4,12 +4,15 @@ import Page.SteamLoginPage;
 import Page.ZKillboardPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\admin\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://steamcommunity.com/sharedfiles/filedetails/?id=1446022987");
 
         driver.manage().window().maximize();
