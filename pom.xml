@@ -56,6 +56,7 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <encoding>UTF-8</encoding>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -83,6 +84,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>
