@@ -13,7 +13,7 @@ public class TestNGCraftOfExile {
 
     @BeforeMethod(description = "Configure something before test")
     public void setBaseURLCraftOfExile(){
-        System.setProperty("webdriver.chrome.driver","./chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(false);
         driver = new ChromeDriver(options);

@@ -14,7 +14,7 @@ public class TestNGLittleNightmaresTwo {
 
     @BeforeTest
     public void setBaseURLLittleNightmaresTwo(){
-        System.setProperty("webdriver.chrome.driver","./chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(false);
         driver = new ChromeDriver(options);
