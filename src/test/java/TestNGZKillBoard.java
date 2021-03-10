@@ -12,7 +12,7 @@ public class TestNGZKillBoard {
 
     @BeforeTest
     public void setBaseURLTestNGZKillBoard(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\admin\\Desktop\\Selenium\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","./chromedriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(false);
         driver = new ChromeDriver(options);
