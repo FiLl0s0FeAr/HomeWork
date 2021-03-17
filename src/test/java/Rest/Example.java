@@ -14,20 +14,20 @@ import static io.restassured.RestAssured.given;
 
 public class Example {
 
+    public static String url = "http://ergast.com/api/f1/2017/circuits.json";
+
     @Test
     public void Task1(){
-        String url = "http://ergast.com/api/f1/2017/circuits.json";
 
         given().when().get(url).then().assertThat().body("MRData.CircuitTable.Circuits.circuitId", hasSize(20));
     }
 
     @Test
     public void Task2(){
-        String url = "http://ergast.com/api/f1/2017/circuits.json";
 
         given().when().get(url).then().assertThat().statusCode(200).
                 and().header("Content-Length", equalTo("4551")).
-                and().contentType(equalTo("application/json; charset=utf-8"));  //or  contentType(ContentType.JSON)
+                and().contentType(equalTo("application/json; charset=utf-8"));
     }
 
     @Test
