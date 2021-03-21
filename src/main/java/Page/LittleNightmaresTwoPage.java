@@ -11,17 +11,9 @@ public class LittleNightmaresTwoPage {
     WebDriver driver;
     WebDriverWait wait;
 
-    @FindBy(xpath="//*[@id=\"2635637\"]/div[2]/a/img")
-    WebElement image2;
 
     @FindBy(xpath = "//*[text()='Фальшь']")
     WebElement firstAchievements;
-
-    @FindBy(xpath = "/html/body/div[1]/div[7]/div[5]/div[4]/div[5]/div[4]/div[1]/span")
-    WebElement webAward;
-
-    @FindBy(xpath = "//img")
-    WebElement image;
 
     @FindBy(xpath = "//*[text()='login']")
     WebElement login;

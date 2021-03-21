@@ -17,11 +17,8 @@ public class Main {
 
         driver.manage().window().maximize();
 
-        /*LittleNightmaresTwoPage lntp = new LittleNightmaresTwoPage(driver);
-        System.out.println(lntp.image.getTagName());
-        System.out.println(lntp.image2.getTagName());
+        LittleNightmaresTwoPage lntp = new LittleNightmaresTwoPage(driver);
         System.out.println(lntp.getNameAchievments());
-        System.out.println(lntp.webAward.getText());
         lntp.clickLogin();
 
         SteamLoginPage slp = new SteamLoginPage(driver);
@@ -34,7 +31,7 @@ public class Main {
         System.out.println(zlb.getName());
         System.out.println(zlb.getTime());
         System.out.println(zlb.getISKEarned());
-        System.out.println(zlb.getISKLost());*/
+        System.out.println(zlb.getISKLost());
 
         driver.get("https://www.craftofexile.com/");
         CraftOfExilePage coep = new CraftOfExilePage(driver);
