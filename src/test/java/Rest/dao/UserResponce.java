@@ -2,11 +2,6 @@ package Rest.dao;
 
 public class UserResponce {
 
-    /*public String name;
-    public String job;
-    public int id;
-    public String createdAt;*/
-
     public int id;
     public String job;
     public String first_name;
@@ -43,4 +38,9 @@ public class UserResponce {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
 }
